@@ -20,7 +20,7 @@ public class QuizMaster {
 		int gridComputing = TextIO.getlnInt();
 		
 		System.out.println("Which University CS Department designed and built the pioneering ILLIAC series?");
-		System.out.println("1. Illinois\n2. Wisconsin\n3. Berkeley\n");
+		System.out.println("1. Illinois\n2. Wisconsin\n3. Berkeley");
 		int illiac = TextIO.getlnInt();
 
 		System.out.println("Which University released \"Mosaic\" - the first multimedia cross-platform browser?");
@@ -38,13 +38,14 @@ public class QuizMaster {
 		if(gridComputing==1) score = score + 10;
 		if(illiac==1) score = score + 10;
 		if(varTF==1) score = score + 10;
+		if(mosaic==1) score = score + 10;
 		/* Michigan students (zip code 48xxx) need to get all of them correct to receive any points */
-		if(zip/1000 == 48) score =0;
-		
+		if((zip/1000 == 48) && (score != 40)) 
+			score =0;
 		/* If an Illinois student gets all questions correct print congratulations */
-		if(score == 40)
-			System.out.println("\nCongratulations!");
 		System.out.print("You scored:");
-		System.out.print(score);
+		if((zip/1000 == 61) && (score == 40))
+			System.out.println("Congratulations!\n");
+		System.out.println(score);
 	}
 }

@@ -11,10 +11,15 @@
 public class Factorial {
 	public static void main(String[] args) {
 		int max = 0;
-		System.out.println("Enter a number between 1 and 20 inclusive.");
-		while (max < 1 || max >= 21) {
+		long fact = 1;
+		do{
+			System.out.println("Enter a number between 1 and 20 inclusive.");	
 			max = TextIO.getlnInt();
-		}
-		TextIO.putln(42);
+		} while(max < 1 || max >= 21);
+			int counter = max;
+			for( ; counter > 0; counter--){
+				fact *= counter;
+			}
+		TextIO.putln(max + "! = " + fact);
 	}
 }
