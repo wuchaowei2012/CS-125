@@ -1,0 +1,67 @@
+testMichiganStudent: Expected 18 lines. Actual 18 lines.
+1. PASS > 'Please enter your zip code.'
+2. PASS > 'Which University CS Department was recently awarded $208 million to develop the worlds fastest computer?'
+3. PASS > '1. Illinois'
+4. PASS > '2. Michigan'
+5. PASS > '3. MIT'
+6. PASS > 'Which University CS Department designed and built the pioneering ILLIAC series?'
+7. PASS > '1. Illinois'
+8. PASS > '2. Wisconsin'
+9. PASS > '3. Berkeley'
+10. FAIL > 'Which University released "Mosaic" - the first multimedia cross-platform browser?' Should be - 
+10.        'Which University released 'Mosaic' - the first multimedia cross-platform browser?'
+testMichiganStudent: Program output above was incorrect on output line 10
+
+testMichiganPhDStudent: Expected 18 lines. Actual 18 lines.
+1. PASS > 'Please enter your zip code.'
+2. PASS > 'Which University CS Department was recently awarded $208 million to develop the worlds fastest computer?'
+3. PASS > '1. Illinois'
+4. PASS > '2. Michigan'
+5. PASS > '3. MIT'
+6. PASS > 'Which University CS Department designed and built the pioneering ILLIAC series?'
+7. PASS > '1. Illinois'
+8. PASS > '2. Wisconsin'
+9. PASS > '3. Berkeley'
+10. FAIL > 'Which University released "Mosaic" - the first multimedia cross-platform browser?' Should be - 
+10.        'Which University released 'Mosaic' - the first multimedia cross-platform browser?'
+testMichiganPhDStudent: Program output above was incorrect on output line 10
+
+testWisconsinStudent: Expected 18 lines. Actual 18 lines.
+1. PASS > 'Please enter your zip code.'
+2. PASS > 'Which University CS Department was recently awarded $208 million to develop the worlds fastest computer?'
+3. PASS > '1. Illinois'
+4. PASS > '2. Michigan'
+5. PASS > '3. MIT'
+6. PASS > 'Which University CS Department designed and built the pioneering ILLIAC series?'
+7. PASS > '1. Illinois'
+8. PASS > '2. Wisconsin'
+9. PASS > '3. Berkeley'
+10. FAIL > 'Which University released "Mosaic" - the first multimedia cross-platform browser?' Should be - 
+10.        'Which University released 'Mosaic' - the first multimedia cross-platform browser?'
+testWisconsinStudent: Program output above was incorrect on output line 10
+
+File QuizMaster.java : @author comments at the beginning should list your netid
+testIllinoisStudent: Expected 19 lines. Actual 20 lines.
+1. PASS > 'Please enter your zip code.'
+2. PASS > 'Which University CS Department was recently awarded $208 million to develop the worlds fastest computer?'
+3. PASS > '1. Illinois'
+4. PASS > '2. Michigan'
+5. PASS > '3. MIT'
+6. PASS > 'Which University CS Department designed and built the pioneering ILLIAC series?'
+7. PASS > '1. Illinois'
+8. PASS > '2. Wisconsin'
+9. PASS > '3. Berkeley'
+10. FAIL > 'Which University released "Mosaic" - the first multimedia cross-platform browser?' Should be - 
+10.        'Which University released 'Mosaic' - the first multimedia cross-platform browser?'
+testIllinoisStudent: Program output above was incorrect on output line 10
+
+File Winner.java : @author comments at the beginning should list your netid
+testA: program output matches expected output.
+testB: program output matches expected output.
+testC: program output matches expected output.
+File Factorial.java : @author comments at the beginning should list your netid
+test1: program output matches expected output.
+test10: program output matches expected output.
+test12: program output matches expected output.
+test17: program output matches expected output.
+testBadInput: program output matches expected output.

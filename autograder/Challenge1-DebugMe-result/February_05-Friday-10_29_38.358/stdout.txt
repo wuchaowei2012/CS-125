@@ -1,0 +1,51 @@
+.F.F.F.F.F.F....F.....
+Time: 0.063
+There were 7 failures:
+1) testMichiganStudent(QuizMasterTest)junit.framework.AssertionFailedError: Review incorrect output on line 10
+	at QuizMasterTest.testMichiganStudent(QuizMasterTest.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:36)
+2) testMichiganPhDStudent(QuizMasterTest)junit.framework.AssertionFailedError: Review incorrect output on line 10
+	at QuizMasterTest.testMichiganPhDStudent(QuizMasterTest.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:36)
+3) testWisconsinStudent(QuizMasterTest)junit.framework.AssertionFailedError: Review incorrect output on line 10
+	at QuizMasterTest.testWisconsinStudent(QuizMasterTest.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:36)
+4) testAuthorship(QuizMasterTest)junit.framework.AssertionFailedError: Fix @authorship
+	at QuizMasterTest.testAuthorship(QuizMasterTest.java:131)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:36)
+5) testIllinoisStudent(QuizMasterTest)junit.framework.AssertionFailedError: Review incorrect output on line 10
+	at QuizMasterTest.testIllinoisStudent(QuizMasterTest.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:36)
+6) testAuthorship(WinnerTest)junit.framework.AssertionFailedError: Fix @authorship
+	at WinnerTest.testAuthorship(WinnerTest.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:36)
+7) testAuthorship(FactorialTest)junit.framework.AssertionFailedError: Fix @authorship
+	at FactorialTest.testAuthorship(FactorialTest.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:36)
+
+FAILURES!!!
+Tests run: 15,  Failures: 7,  Errors: 0
+
+8 passed out of 15
+Score=53
