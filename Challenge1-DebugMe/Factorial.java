@@ -6,7 +6,7 @@
  * tests. Hint sometimes an 'int' just 'aint big enough.
  * 
  * @see Factorial-ReadMe.txt for details on how to complete this program.
- * @author insert-your-netid-here
+ * @author ywang443
  */
 public class Factorial {
 	public static void main(String[] args) {

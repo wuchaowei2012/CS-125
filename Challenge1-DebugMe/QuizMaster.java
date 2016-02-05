@@ -3,7 +3,7 @@
  * A program to test students' CS knowledge.
  * Watch out ! There may be deliberate bugs in some of the logic below :-)
  * @see QuizMaster-ReadMe.txt for details on how to complete this program.
- * @author insert-your-netid-here
+ * @author ywang443
  *
  */
 public class QuizMaster {
@@ -23,7 +23,7 @@ public class QuizMaster {
 		System.out.println("1. Illinois\n2. Wisconsin\n3. Berkeley");
 		int illiac = TextIO.getlnInt();
 
-		System.out.println("Which University released \"Mosaic\" - the first multimedia cross-platform browser?");
+		System.out.println("Which University released \'Mosaic\' - the first multimedia cross-platform browser?");
 		System.out.println("(Mosaic's source code was later licensed to Microsoft and Netscape Communications)");
 		System.out.println("1. Illinois\n2. Michigan\n3. Wisconsin");
 		int mosaic = TextIO.getlnInt();
