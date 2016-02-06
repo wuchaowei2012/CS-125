@@ -28,7 +28,7 @@ public class QuizMaster {
 		System.out.println("1. Illinois\n2. Michigan\n3. Wisconsin");
 		int mosaic = TextIO.getlnInt();
 		
-		System.out.println("True/False ? Variables have four things: a type, name, value and a memory location.");
+		System.out.println("True/False? Variables have four things: a type, name, value and a memory location.");
 		System.out.println("1. True");
 		System.out.println("2. False");
 		int varTF = TextIO.getlnInt();
@@ -43,9 +43,8 @@ public class QuizMaster {
 		if((zip/1000 == 48) && (score != 40)) 
 			score =0;
 		/* If an Illinois student gets all questions correct print congratulations */
-		System.out.print("You scored:");
+		System.out.println("You scored:" + score);
 		if((zip/1000 == 61) && (score == 40))
 			System.out.println("Congratulations!\n");
-		System.out.println(score);
 	}
 }
