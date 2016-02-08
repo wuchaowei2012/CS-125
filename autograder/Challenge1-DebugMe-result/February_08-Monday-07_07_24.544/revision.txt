@@ -1,0 +1,11 @@
+Path: work/students/ywang443/Challenge1-DebugMe
+URL: https://subversion.ews.illinois.edu/svn/sp16-cs125/ywang443/Challenge1-DebugMe
+Repository Root: https://subversion.ews.illinois.edu/svn/sp16-cs125
+Repository UUID: 391430f4-0411-4dd5-8b27-250df5562fc7
+Revision: 8107
+Node Kind: directory
+Schedule: normal
+Last Changed Author: ywang443
+Last Changed Rev: 6936
+Last Changed Date: 2016-02-06 15:25:50 -0600 (Sat, 06 Feb 2016)
+
