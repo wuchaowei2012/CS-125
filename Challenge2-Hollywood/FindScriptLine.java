@@ -20,7 +20,7 @@ public class FindScriptLine {
 		while(!TextIO.eof()){
 			lineNum++;
 			String line = TextIO.getln();
-			if(line.contains(word) || line.contains(word.toLowerCase()) || line.contains(word.toUpperCase()))
+			if(line.toLowerCase().contains(word.toLowerCase()))
 				output = true;
 			
 			if(output)
