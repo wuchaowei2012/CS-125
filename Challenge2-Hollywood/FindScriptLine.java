@@ -3,12 +3,31 @@
  * A program to search for specific lines and print their line number.
  * See FindScriptLine.txt for more details
  * TODO: add your netid to the line below
- * @author put-your-netid-here
+ * @author ywang443
  */
 public class FindScriptLine {
 
 	public static void main(String[] args) {
 // TODO: Implement the functionality described in FindScriptLine.txt
 // TODO: Test your code manually and using the automated unit tests in FindScriptLineTest		
+		boolean output=false;
+		String word="";
+		int lineNum = 0;
+		TextIO.putln("Please enter the word(s) to search for");
+		word = TextIO.getln();
+		TextIO.putln("Searching for '" + word + "'");
+		TextIO.readFile("thematrix.txt");
+		while(!TextIO.eof()){
+			lineNum++;
+			String line = TextIO.getln();
+			if(line.contains(word) || line.contains(word.toLowerCase()) || line.contains(word.toUpperCase()))
+				output = true;
+			
+			if(output)
+				TextIO.putln(lineNum + " - " + line.trim());
+			
+			output = false;
+		}
+		TextIO.putln("Done Searching for '" + word + "'");
 	}
 }
