@@ -1,0 +1,11 @@
+Path: work/students/ywang443/Challenge2-Hollywood
+URL: https://subversion.ews.illinois.edu/svn/sp16-cs125/ywang443/Challenge2-Hollywood
+Repository Root: https://subversion.ews.illinois.edu/svn/sp16-cs125
+Repository UUID: 391430f4-0411-4dd5-8b27-250df5562fc7
+Revision: 11583
+Node Kind: directory
+Schedule: normal
+Last Changed Author: ywang443
+Last Changed Rev: 10924
+Last Changed Date: 2016-02-10 17:15:51 -0600 (Wed, 10 Feb 2016)
+
