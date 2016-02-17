@@ -8,13 +8,49 @@
  * Good Programming Hints: "DRY: Don't Repeat Yourself"
  * Try to make your program as short as possible.
  * TODO: add your netid to the line below
- * @author put-your-netid-here
+ * @author ywang443
  */
 public class CaesarCipher {
 
 	public static void main(String[] strings) {
 		//TODO: Delete the following line and write your implementation here- 
-		throw new RuntimeException ("Et tu Brutus?");
+		//int shiftNum;
+		TextIO.putln("Please enter the shift value (between -25..-1 and 1..25)");
+		int shiftNum = TextIO.getlnInt();
+		while((shiftNum < -25 || shiftNum > 25 || shiftNum == 0) && !TextIO.eof()){
+			TextIO.putln(shiftNum + " is not a valid shift value.");
+			TextIO.putln("Please enter the shift value (between -25..-1 and 1..25)");
+			shiftNum = TextIO.getlnInt();
+		}		
+		TextIO.putln("Using shift value of " + shiftNum);
+		while(true){
+			String line = "";
+			StringBuilder ret = new StringBuilder();
+			TextIO.putln("Please enter the source text (empty line to quit)");
+			line = TextIO.getln();
+			if(line.isEmpty()){
+				TextIO.putln("Bye.");
+				break;
+			}
+			TextIO.put("Source   :");
+			TextIO.putln(line);
+			line = line.toUpperCase();
+			for(int i = 0; i < line.length(); i++){
+				if(line.charAt(i)>='A' && line.charAt(i)<='Z'){
+					char c = (char) (line.charAt(i) + shiftNum);
+					if (c > 'Z')
+						ret.append((char)(line.charAt(i) - (26-shiftNum)));
+					else if(c < 'A')
+						ret.append((char)(line.charAt(i) + (26+shiftNum)));
+					else
+						ret.append(c);
+				}
+				else{
+					ret.append(line.charAt(i));
+				}
+			}
+			TextIO.put("Processed:" + ret + "\n");
+		}
 	}
 
 }
