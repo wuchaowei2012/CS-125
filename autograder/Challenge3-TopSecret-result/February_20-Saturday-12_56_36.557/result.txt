@@ -1,0 +1,2 @@
+score=32
+max_possible_points=100

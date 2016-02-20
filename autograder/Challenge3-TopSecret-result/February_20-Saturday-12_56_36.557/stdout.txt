@@ -1,0 +1,136 @@
+........E.E..F.F.F.F.F.F.F.F.F.F.F.F.F..F.F.F.F
+Time: 0.303
+There were 2 errors:
+1) testPositionShift(CaesarCipherTest)java.lang.IllegalArgumentException: Attempt to read past end-of-file in standard input???
+	at TextIO.readChar(TextIO.java:1024)
+	at TextIO.errorMessage(TextIO.java:988)
+	at TextIO.readInteger(TextIO.java:949)
+	at TextIO.getInt(TextIO.java:673)
+	at TextIO.getlnInt(TextIO.java:519)
+	at CaesarCipher.main(CaesarCipher.java:23)
+	at CaesarCipherTest.testPositionShift(CaesarCipherTest.java:98)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+2) testDecodePositionShift(CaesarCipherTest)java.lang.IllegalArgumentException: Attempt to read past end-of-file in standard input???
+	at TextIO.readChar(TextIO.java:1024)
+	at TextIO.errorMessage(TextIO.java:988)
+	at TextIO.readInteger(TextIO.java:949)
+	at TextIO.getInt(TextIO.java:673)
+	at TextIO.getlnInt(TextIO.java:519)
+	at CaesarCipher.main(CaesarCipher.java:23)
+	at CaesarCipherTest.testDecodePositionShift(CaesarCipherTest.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+There were 17 failures:
+1) testRickRolled(MagicEightBallTest)junit.framework.AssertionFailedError: Fix line 4
+	at MagicEightBallTest.testRickRolled(MagicEightBallTest.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+2) testAuthorship(MagicEightBallTest)junit.framework.AssertionFailedError: Fix authorship
+	at MagicEightBallTest.testAuthorship(MagicEightBallTest.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+3) testKeysSwapped(MagicEightBallTest)junit.framework.AssertionFailedError: Fix line 4
+	at MagicEightBallTest.testKeysSwapped(MagicEightBallTest.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+4) testAceMidterm(MagicEightBallTest)junit.framework.AssertionFailedError: Fix line 4
+	at MagicEightBallTest.testAceMidterm(MagicEightBallTest.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+5) testMichiganA(MagicEightBallTest)junit.framework.AssertionFailedError: Fix line 4
+	at MagicEightBallTest.testMichiganA(MagicEightBallTest.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+6) testMichiganB(MagicEightBallTest)junit.framework.AssertionFailedError: Fix line 4
+	at MagicEightBallTest.testMichiganB(MagicEightBallTest.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+7) testAuthorship(OddSumTest)junit.framework.AssertionFailedError: Fix authorship
+	at OddSumTest.testAuthorship(OddSumTest.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+8) testOddSum5(OddSumTest)junit.framework.AssertionFailedError: Fix line 1
+	at OddSumTest.testOddSum5(OddSumTest.java:11)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+9) testOddSumEven(OddSumTest)junit.framework.AssertionFailedError: Fix line 1
+	at OddSumTest.testOddSumEven(OddSumTest.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+10) testOddSumOdd(OddSumTest)junit.framework.AssertionFailedError: Fix line 1
+	at OddSumTest.testOddSumOdd(OddSumTest.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+11) testAuthorship(CipherBreakerTest)junit.framework.AssertionFailedError: Fix authorship
+	at CipherBreakerTest.testAuthorship(CipherBreakerTest.java:15)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+12) testUpperCase(CipherBreakerTest)junit.framework.AssertionFailedError: incorrect output on line 3
+	at CipherBreakerTest.testUpperCase(CipherBreakerTest.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+13) testMixedCase(CipherBreakerTest)junit.framework.AssertionFailedError: incorrect output on line 3
+	at CipherBreakerTest.testMixedCase(CipherBreakerTest.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+14) testDigitsAndSpace(CipherBreakerTest)junit.framework.AssertionFailedError: incorrect output on line 3
+	at CipherBreakerTest.testDigitsAndSpace(CipherBreakerTest.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+15) testIgnoreOtherPunctuation(CipherBreakerTest)junit.framework.AssertionFailedError: incorrect output on line 3
+	at CipherBreakerTest.testIgnoreOtherPunctuation(CipherBreakerTest.java:92)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+16) testPunctuation(CipherBreakerTest)junit.framework.AssertionFailedError: incorrect output on line 3
+	at CipherBreakerTest.testPunctuation(CipherBreakerTest.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+17) testTheWorks(CipherBreakerTest)junit.framework.AssertionFailedError: incorrect output on line 3
+	at CipherBreakerTest.testTheWorks(CipherBreakerTest.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+
+FAILURES!!!
+Tests run: 28,  Failures: 17,  Errors: 2
+
+9 passed out of 28
+Score=32

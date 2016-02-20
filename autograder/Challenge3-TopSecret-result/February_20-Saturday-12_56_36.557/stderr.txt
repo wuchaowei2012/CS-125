@@ -1,0 +1,116 @@
+CheckInputValues: program output matches expected output.
+EncryptSimplest: program output matches expected output.
+Rot13UpperLowerCase: program output matches expected output.
+SkipPunctutation: program output matches expected output.
+Decrypt: program output matches expected output.
+DecryptMultipleLines: program output matches expected output.
+RickRolled: Expected 4 lines. Actual 4 lines.
+1. PASS > 'Hours spent working on CS125?'
+2. PASS > 'Happy?'
+3. PASS > 'Know mentor's innermost Java secrets?'
+4. FAIL > 'Delete Enter Keys Swapped' Should be - 
+4.        'Rick Rolled Four Times in One Day'
+RickRolled: Program output above was incorrect on output line 4
+
+File MagicEightBall.java : @author comments at the beginning should list your netid
+KeysSwapped: Expected 4 lines. Actual 4 lines.
+1. PASS > 'Hours spent working on CS125?'
+2. PASS > 'Happy?'
+3. PASS > 'Know mentor's innermost Java secrets?'
+4. FAIL > 'Rick Rolled Four Times in One Day' Should be - 
+4.        'Delete Enter Keys Swapped'
+KeysSwapped: Program output above was incorrect on output line 4
+
+AceMidterm: Expected 4 lines. Actual 4 lines.
+1. PASS > 'Hours spent working on CS125?'
+2. PASS > 'Happy?'
+3. PASS > 'Know mentor's innermost Java secrets?'
+4. FAIL > 'Delete Enter Keys Swapped' Should be - 
+4.        'Ace CS125 Exam'
+AceMidterm: Program output above was incorrect on output line 4
+
+MichiganA: Expected 4 lines. Actual 4 lines.
+1. PASS > 'Hours spent working on CS125?'
+2. PASS > 'Happy?'
+3. PASS > 'Know mentor's innermost Java secrets?'
+4. FAIL > 'Rick Rolled Four Times in One Day' Should be - 
+4.        'Embarrassing Michigan Road Trip'
+MichiganA: Program output above was incorrect on output line 4
+
+MichiganB: Expected 4 lines. Actual 4 lines.
+1. PASS > 'Hours spent working on CS125?'
+2. PASS > 'Happy?'
+3. PASS > 'Know mentor's innermost Java secrets?'
+4. FAIL > 'Delete Enter Keys Swapped' Should be - 
+4.        'Embarrassing Michigan Road Trip'
+MichiganB: Program output above was incorrect on output line 4
+
+File OddSum.java : @author comments at the beginning should list your netid
+OddSum5: Expected 3 lines. Actual 1 lines.
+1. FAIL > '' Should be - 
+1.        'Max?'
+OddSum5: Program output above was incorrect on output line 1
+OddSum5: ... Missing line #2 : 1 + 3 + 5 = 9
+
+testOddSumEven: calling OddSum.main with input value 76
+Expected output:
+Max?
+1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 + 17 + 19 + 21 + 23 + 25 + 27 + 29 + 31 + 33 + 35 + 37 + 39 + 41 + 43 + 45 + 47 + 49 + 51 + 53 + 55 + 57 + 59 + 61 + 63 + 65 + 67 + 69 + 71 + 73 + 75 = 1444
+1444 = 75 + 73 + 71 + 69 + 67 + 65 + 63 + 61 + 59 + 57 + 55 + 53 + 51 + 49 + 47 + 45 + 43 + 41 + 39 + 37 + 35 + 33 + 31 + 29 + 27 + 25 + 23 + 21 + 19 + 17 + 15 + 13 + 11 + 9 + 7 + 5 + 3 + 1
+
+OddSumEven: Expected 3 lines. Actual 1 lines.
+1. FAIL > '' Should be - 
+1.        'Max?'
+OddSumEven: Program output above was incorrect on output line 1
+OddSumEven: ... Missing line #2 : 1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 + 17 + 19 + 21 + 23 + 25 + 27 + 29 + 31 + 33 + 35 + 37 + 39 + 41 + 43 + 45 + 47 + 49 + 51 + 53 + 55 + 57 + 59 + 61 + 63 + 65 + 67 + 69 + 71 + 73 + 75 = 1444
+
+testOddSumOdd: calling OddSum.main with input value 31
+Expected output:
+Max?
+1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 + 17 + 19 + 21 + 23 + 25 + 27 + 29 + 31 = 256
+256 = 31 + 29 + 27 + 25 + 23 + 21 + 19 + 17 + 15 + 13 + 11 + 9 + 7 + 5 + 3 + 1
+
+OddSumOdd: Expected 3 lines. Actual 1 lines.
+1. FAIL > '' Should be - 
+1.        'Max?'
+OddSumOdd: Program output above was incorrect on output line 1
+OddSumOdd: ... Missing line #2 : 1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 + 17 + 19 + 21 + 23 + 25 + 27 + 29 + 31 = 256
+
+File CipherBreaker.java : @author comments at the beginning should list your netid
+UpperCase: Expected 6 lines. Actual 2 lines.
+1. PASS > 'Text?'
+2. PASS > 'ABABABABABABABABABABABABABABZZZZZZZZZZQ'
+UpperCase: Program output above was incorrect on output line 3
+UpperCase: ... Missing line #3 : A:14
+
+MixedCase: Expected 4 lines. Actual 2 lines.
+1. PASS > 'Text?'
+2. PASS > 'EeEeEeEeEeEeEeEeEeEeEeEeEeEeEeEeEeEef'
+MixedCase: Program output above was incorrect on output line 3
+MixedCase: ... Missing line #3 : E:36
+
+IgnoreSomeCharacters: program output matches expected output.
+DigitsAndSpace: Expected 4 lines. Actual 2 lines.
+1. PASS > 'Text?'
+2. PASS > '     0 1          2 3 4      9'
+DigitsAndSpace: Program output above was incorrect on output line 3
+DigitsAndSpace: ... Missing line #3 : DIGITS:6
+
+IgnoreOtherPunctuation: Expected 3 lines. Actual 2 lines.
+1. PASS > 'Text?'
+2. PASS > '#Q@#*()'
+IgnoreOtherPunctuation: Program output above was incorrect on output line 3
+IgnoreOtherPunctuation: ... Missing line #3 : Q:1
+
+Punctuation: Expected 3 lines. Actual 2 lines.
+1. PASS > 'Text?'
+2. PASS > '"'.,!--!,.'"'
+Punctuation: Program output above was incorrect on output line 3
+Punctuation: ... Missing line #3 : PUNCTUATION:12
+
+TheWorks: Expected 24 lines. Actual 2 lines.
+1. PASS > 'Text?'
+2. PASS > '2. "iiF YOU want truly to understand something, try to change it."- K. Lewin'
+TheWorks: Program output above was incorrect on output line 3
+TheWorks: ... Missing line #3 : A:3
+
