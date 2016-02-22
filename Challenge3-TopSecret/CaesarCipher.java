@@ -17,11 +17,11 @@ public class CaesarCipher {
 		//int shiftNum;
 		TextIO.putln("Please enter the shift value (between -25..-1 and 1..25)");
 		int shiftNum = TextIO.getlnInt();
-		while((shiftNum < -25 || shiftNum > 25 || shiftNum == 0) && !TextIO.eof()){
+		while (shiftNum < -25 || shiftNum > 25 || shiftNum == 0){
 			TextIO.putln(shiftNum + " is not a valid shift value.");
 			TextIO.putln("Please enter the shift value (between -25..-1 and 1..25)");
 			shiftNum = TextIO.getlnInt();
-		}		
+		}
 		TextIO.putln("Using shift value of " + shiftNum);
 		while(true){
 			String line = "";
