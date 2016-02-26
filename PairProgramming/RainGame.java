@@ -1,6 +1,6 @@
 //UIUC CS125 SPRING 2016 MP. File: RainGame.java, CS125 Project: PairProgramming, Version: 2016-02-23T05:57:26-0600.780520870
 /**
- * @author replace-this-with-your-netids-on-this-line-here-with-a-comma-between-them
+ * @author ywang443,jiebao3
  */
 public class RainGame {
 
@@ -10,31 +10,76 @@ public class RainGame {
 		// Do not put your name or your UIN. 
 		// REMEMBER TO COMMIT this file...
 	
-		int x=0, y=0, dx=0, dy=0, score = 0;
+		int x=0, y=0, dx=0, dy=0, score = 9, level = 0;
+		int speed = 0;
+		int direction = 1;
 		String text = "";
-		long startTime =System.currentTimeMillis();
+		//long startTime =System.currentTimeMillis();
 		
-		Zen.setFont("Helvetica-64");
+		Zen.setFont("Helvetica-32");
 		while (Zen.isRunning()) {
-
-			if (text.length() == 0) {
-				x = 0;
-				y = Zen.getZenHeight() / 2;
-				dx = 2;
-				dy = 0;
-				text = "" + (int) (Math.random() * 999);
-				long elapsed = System.currentTimeMillis() - startTime;
-				startTime = System.currentTimeMillis();
-				score += 3000 / elapsed;
+			direction = (int)(Math.random() * 4 + 1);
+			if(score > 50){
+				Zen.drawText("Don't stay in the hospital anymore.", 0, 400);
+				Zen.drawText("You are good to go!", 0, 430);
+				break;
 			}
-			Zen.setColor(255, 0, 255);
+			if(score < 0){
+				Zen.drawText("Take the pill right now!", 150, 400);			
+				break;
+			}
+			
+			if (text.length() == 0) {
+				score++;
+				if(direction == 1){ //up
+					x = Zen.getZenWidth() / 2;
+					y = 0;
+					dx = 0;
+					dy = 2 + speed;
+				}
+				else if(direction == 2){ //down
+					x = Zen.getZenWidth() / 2;
+					y = Zen.getZenHeight();
+					dx = 0;
+					dy = -(2 + speed);
+				}
+				else if(direction == 3){ //left
+					x = 0;
+					y = Zen.getZenHeight() / 2;
+					dy = 0;
+					dx = 2 + speed;
+				}
+				else{ //right
+					x = Zen.getZenWidth();
+					y = Zen.getZenHeight() / 2;
+					dy = 0;
+					dx = -(2 + speed);
+				}
+				
+
+				if(level < 3){  // can be changed
+					text = "" + randomChar() + randomChar() + randomChar() + randomChar() + randomChar();
+				}
+				else{
+					text = "" + randomChar() + (int)(Math.random() * 99) + randomChar() + randomChar() + (int)(Math.random() * 99) + randomChar() + randomChar();
+				}
+				//long elapsed = System.currentTimeMillis() - startTime;
+				//startTime = System.currentTimeMillis();
+				 /*3000 / elapsed;*/
+				level = score / 10;
+				if(level == 0)
+					level = 1;
+				speed = score / 10;
+			}
+			
+			Zen.setColor(0, 0, 0);
 			Zen.fillRect(0, 0, Zen.getZenWidth(), Zen.getZenHeight());
 
-			Zen.setColor(0, 255, 0);
+			Zen.setColor(255, 255, 255);
 			Zen.drawText(text, x, y);
 			
-			Zen.drawText("Level: 0",10,30);
-			Zen.drawText("Score: 0",10,60);
+			Zen.drawText("Level:" + level,10,30);
+			Zen.drawText("Score:" + score,10,60);
 			
 			x += dx;
 			y += dy;
@@ -45,15 +90,36 @@ public class RainGame {
 			// So next iteration we will only get the most recently pressed keys.
 			Zen.setEditText("");
 			
-			for(int i=0;i < user.length();i++) {
+			for(int i=0; i < user.length(); i++) {
 				char c = user.charAt(i);
-				if(c == text.charAt(0))
+				if(text == ""){
+				}
+				else if(toUpperCase(c) == text.charAt(0) || toLowerCase(c) == text.charAt(0)){
 					text = text.substring(1,text.length()); // all except first character
+				}
+				else{
+					text = "";
+					score -= 2;
+					continue;
+				}
 			}
 			
 			Zen.sleep(90);// sleep for 90 milliseconds
-
+			
 		}
 	}
-
+	
+	public static char randomChar(){
+		return (char)((int) (Math.random() * 26 + 65));
+	}
+	public static char toUpperCase(char c){
+		if(c >= 65 && c <= 90)
+			return c;
+		return (char) (c - 32);
+	}
+	public static char toLowerCase(char c){
+		if(c >= 65 && c <= 90)
+			return (char) (c + 32);
+		return c;
+	}
 }
