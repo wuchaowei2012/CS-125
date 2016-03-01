@@ -3,7 +3,7 @@ import sun.net.TelnetProtocolException;
 //UIUC CS125 SPRING 2016 MP. File: RainGame.java, CS125 Project: PairProgramming, Version: 2016-02-23T05:57:26-0600.780520870
 /**
  * @author ywang443,jiebao3
- * reviewed by vkahuja2, apdunn2
+ * @reviewed by vkahuja2, apdunn2
  */ 
 public class RainGame {
 
