@@ -1,7 +1,10 @@
+import sun.net.TelnetProtocolException;
+
 //UIUC CS125 SPRING 2016 MP. File: RainGame.java, CS125 Project: PairProgramming, Version: 2016-02-23T05:57:26-0600.780520870
 /**
  * @author ywang443,jiebao3
- */
+ * reviewed by vkahuja2, apdunn2
+ */ 
 public class RainGame {
 
 	public static void main(String[] args) {
@@ -10,14 +13,32 @@ public class RainGame {
 		// Do not put your name or your UIN. 
 		// REMEMBER TO COMMIT this file...
 	
-		int x=0, y=0, dx=0, dy=0, score = 9, level = 0;
+		int x=0, y=0, dx=0, dy=0, score = 9, level = 1;
 		int speed = 0;
 		int direction = 1;
 		String text = "";
 		//long startTime =System.currentTimeMillis();
-		
+		//int skipped = 1;
 		Zen.setFont("Helvetica-32");
+		/*Zen.drawText("Skip easy levels? Y for yes and N for no", 0, 200);
+		String skip = Zen.getEditText();
+		if(skip.charAt(0) == 'Y' || skip.charAt(0) == 'y'){
+			level = 3;
+		}
+		Zen.sleep(90);*/
 		while (Zen.isRunning()) {
+			/*
+			if(skipped == 1){
+				skipped = 0;
+				String skip = "";
+				Zen.drawText("Skip easy levels? Y for yes and N for no", 0, 200);
+				do{
+					skip = Zen.getEditText();
+				}while(skip == "");
+				char c = skip.charAt(0);
+				if(c == 'Y' || c == 'y')
+					level = 3;
+			}*/
 			direction = (int)(Math.random() * 4 + 1);
 			if(score > 50){
 				Zen.drawText("Don't stay in the hospital anymore.", 0, 400);
@@ -57,7 +78,7 @@ public class RainGame {
 				}
 				
 
-				if(level < 3){  // can be changed
+				if(level < 2){  // can be changed
 					text = "" + randomChar() + randomChar() + randomChar() + randomChar() + randomChar();
 				}
 				else{
