@@ -1,0 +1,8 @@
+.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.Todo: Implement Effects.process(half)
+E..UtilPrepend:Expected length=4 actual=3
+UtilPrepend:Expected [AA, DD9152, EE, FF]
+UtilPrepend:Actual [DD9152, EE, FF]
+F.UtilDiscard:Expected length=3 actual=4
+UtilDiscard:Expected [CC1118, EE, FF]
+UtilDiscard:Actual [CC1118, dd, EE, FF]
+F.F.
