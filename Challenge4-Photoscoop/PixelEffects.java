@@ -140,7 +140,7 @@ public class PixelEffects {
 	}
 
 	/** Removes "redeye" caused by a camera flash. sourceB is not used */
-	public static int[][] redeye(int[][] source, int[][] sourceB) {
+	public static int[][] redeye(int[][] source) {
 
 		int width = source.length, height = source[0].length;
 		int[][] result = new int[width][height];
@@ -165,6 +165,15 @@ public class PixelEffects {
 		
 		// Does not ask for any user input and returns a new 2D array
 		// Todo: remove this return null
-		return null;
+		int[][] ret = new int[source.length][source[0].length];
+		for (int i = 0; i < source.length; i++){
+			for (int j = 0; j < source[0].length; j++) {
+				int red = 256 - RGBUtilities.toRed(source[i][j]);
+				int green = 256 - RGBUtilities.toGreen(source[i][j]);
+				int blue = 256 - RGBUtilities.toBlue(source[i][j]);
+				ret[i][j] = RGBUtilities.toRGB(red, green, blue);
+			}
+		}
+		return ret;
 	}
 }
