@@ -1,11 +1,11 @@
-//UIUC CS125 SPRING 2016 MP. File: Effects.java, CS125 Project: Challenge4-Photoscoop, Version: 2016-02-22T08:07:56-0600.345149194
+	//UIUC CS125 SPRING 2016 MP. File: Effects.java, CS125 Project: Challenge4-Photoscoop, Version: 2016-02-22T08:07:56-0600.345149194
 /*A class to delegate each effect request.
  * The process method is called whenever the user selects a menu item.
  * However it wouldnt be hard to build a batch program that also uses this process method.
  * 
  * Todo: Put your netid (i.e. username) in the line below
  * 
- * @author put-your-netid-here
+ * @author ywang443
  */
 public class Effects {
 	/**
@@ -32,6 +32,30 @@ public class Effects {
 		// hint: for some commands the string is slightly different than the method name
 		// hint: remember to use string.equals not == to compare strings
 		// This message and the exception should not occur if you match all possible command strings
+		if (cmd.equals("copy")) 
+			return PixelEffects.copy(source);
+		else if (cmd.equals("resize")) 
+			return PixelEffects.resize(source,background);
+		else if (cmd.equals("half")) 
+			return PixelEffects.half(source);
+		else if (cmd.equals("flip")) 
+			return PixelEffects.flip(source);
+		else if (cmd.equals("mirror")) 
+			return PixelEffects.mirror(source);
+		else if (cmd.equals("rotate")) 
+			return PixelEffects.rotateLeft(source);
+		else if (cmd.equals("merge")) 
+			return PixelEffects.merge(source,background);
+		else if (cmd.equals("key")) 
+			return PixelEffects.chromaKey(source,background);
+		else if (cmd.equals("redeye")) 
+			return PixelEffects.redeye(source);
+		else if (cmd.equals("funky")) 
+			return PixelEffects.funky(source,background);
+		else if (cmd.equals("hide")) 
+			return Stenography.hide(source,background);
+		else if (cmd.equals("extract")) 
+			return Stenography.extract(source);
 		System.out.println("Todo: Implement Effects.process("+cmd+")");
 		throw new RuntimeException("Unknown command:"+cmd);
 	}// end method
