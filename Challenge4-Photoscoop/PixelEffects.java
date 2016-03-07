@@ -104,8 +104,18 @@ public class PixelEffects {
 		// The output should be the same size as the input. Scale (x,y) values
 		// when reading the background
 		// (e.g. so the far right pixel of the source is merged with the
-		// far-right pixel ofthe background).
-		return sourceA;
+		// far-right pixel of the background).
+		int [][] bg = resize(sourceB, sourceA);
+		int [][] ret = new int[sourceA.length][sourceA[0].length];
+		for (int i = 0; i < sourceA.length; i++){
+			for (int j = 0; j < sourceA[0].length; j++){
+				int red = (RGBUtilities.toRed(sourceA[i][j]) + RGBUtilities.toRed(bg[i][j])) / 2;
+				int green = (RGBUtilities.toGreen(sourceA[i][j]) + RGBUtilities.toGreen(bg[i][j])) / 2;
+				int blue = (RGBUtilities.toBlue(sourceA[i][j]) + RGBUtilities.toBlue(bg[i][j])) / 2;
+				ret[i][j] = RGBUtilities.toRGB(red, green, blue);
+			}
+		}
+		return ret;
 	}
 
 	/**
@@ -116,7 +126,17 @@ public class PixelEffects {
 		// If the image has a different size than the background use the
 		// resize() method
 		// create an image the same as the background size.
-		return foreImage;
+		int[][] ret = new int[backImage.length][backImage[0].length];
+		int[][] bg = resize(foreImage,backImage);
+		for(int i = 0; i < backImage.length; i++) {
+			for(int j = 0; j < backImage[0].length; j++) {
+				if (RGBUtilities.toGreen(foreImage[i][j]) > 50) 
+					ret[i][j] = backImage[i][j];
+				else 
+					ret[i][j] = bg[i][j];
+			}
+		}
+		return ret;
 	}
 
 	/** Removes "redeye" caused by a camera flash. sourceB is not used */
