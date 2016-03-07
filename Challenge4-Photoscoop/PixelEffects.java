@@ -4,7 +4,7 @@
  *
  * Todo: Put your netid (i.e. username) in the line below
  * 
- * @author put-your-netid-here
+ * @author ywang443
  */
 public class PixelEffects {
 
@@ -12,7 +12,14 @@ public class PixelEffects {
 	public static int[][] copy(int[][] source) {
 		// Create a NEW 2D integer array and copy the colors across
 		// See redeye code below
-		return null; // Fix Me
+		int [][] ret = new int [source.length][source[0].length];
+		for (int i = 0; i < source.length; i++){
+			//ret = new int [source.length][source[i].length];
+			for (int j = 0; j < source[i].length; j++){
+				ret[i][j] = source[i][j];
+			}
+		}
+		return ret; // Fix Me
 	}
 	/**
 	 * Resize the array image to the new width and height
@@ -24,7 +31,13 @@ public class PixelEffects {
 	 * @return
 	 */
 	public static int[][] resize(int[][] source, int newWidth, int newHeight) {
-		return null; // Fix Me
+		int[][] ret = new int[newWidth][newHeight];		
+		for(int i = 0; i < newWidth; i++) {
+			for(int j = 0; j < newHeight; j++) {
+				ret[i][j] = source[(int)(((double)i/(double)newWidth)*source.length)][(int)(((double)j/(double)newHeight)*source[0].length)];
+			}
+		}
+		return ret;
 		// Hints: Use two nested for loops between 0... newWidth-1 and 0.. newHeight-1 inclusive.
 		// Hint: You can just use relative proportion to calculate the x (or y coordinate)  in the original image.
 		// For example if you're setting a pixel halfway across the image, you should be reading half way across the original image too.
@@ -35,7 +48,7 @@ public class PixelEffects {
 	 * delegate the work to resize()!
 	 */
 	public static int[][] half(int[][] source) {
-		return null; // Fix Me
+		return resize(source, source.length/2, source[0].length/2); // Fix Me
 	}
 	
 	/**
@@ -49,22 +62,41 @@ public class PixelEffects {
 	 * @return the resized image
 	 */
 	public static int[][] resize(int[][] source, int[][] reference) {
-		return null; // Fix Me
+		return resize(source, reference.length, reference[0].length); // Fix Me
 	}
 
 	/** Flip the image vertically */
 	public static int[][] flip(int[][] source) {
-		return null;// Fix Me
+		int ret [][] = new int[source.length][source[0].length];
+		for (int i = 0; i < source.length; i++){
+			for(int j = 0; j < source[0].length; j++){
+				ret[i][j] = source[i][source[0].length - 1 - j];
+			}	
+		}
+		return ret;// Fix Me
 	}
 
 	/** Reverse the image horizontally */
 	public static int[][] mirror(int[][] source) {
-		return null;// Fix Me
+		int ret [][] = new int[source.length][source[0].length];
+		for (int i = 0; i < source.length; i++){
+			for(int j = 0; j < source[0].length; j++){
+				ret[i][j] = source[source.length - 1 - i][j];
+			}	
+		}
+		return ret;// Fix Me
 	}
 
 	/** Rotate the image */
 	public static int[][] rotateLeft(int[][] source) {
-		return null;
+		int ret [][] = new int[source[0].length][source.length];
+		for(int i = 0; i < source.length; i++){
+			for (int j = 0; j < source[0].length; j++){
+				ret[j][i] = source[i][j];
+			}
+		}
+		ret = flip(ret);
+		return ret;
 	}
 
 	/** Merge the red,blue,green components from two images */
