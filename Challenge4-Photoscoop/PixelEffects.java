@@ -105,7 +105,7 @@ public class PixelEffects {
 		// when reading the background
 		// (e.g. so the far right pixel of the source is merged with the
 		// far-right pixel of the background).
-		int [][] bg = resize(sourceB, sourceA.length, sourceA[0].length);
+		int [][] bg = resize(sourceB, sourceA);
 		int [][] ret = new int[sourceA.length][sourceA[0].length];
 		for (int i = 0; i < sourceA.length; i++){
 			for (int j = 0; j < sourceA[0].length; j++){
