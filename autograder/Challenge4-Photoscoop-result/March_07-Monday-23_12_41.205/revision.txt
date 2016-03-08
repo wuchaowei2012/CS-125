@@ -1,0 +1,11 @@
+Path: work/students/ywang443/Challenge4-Photoscoop
+URL: https://subversion.ews.illinois.edu/svn/sp16-cs125/ywang443/Challenge4-Photoscoop
+Repository Root: https://subversion.ews.illinois.edu/svn/sp16-cs125
+Repository UUID: 391430f4-0411-4dd5-8b27-250df5562fc7
+Revision: 29292
+Node Kind: directory
+Schedule: normal
+Last Changed Author: ywang443
+Last Changed Rev: 28650
+Last Changed Date: 2016-03-07 20:09:35 -0600 (Mon, 07 Mar 2016)
+
