@@ -24,6 +24,52 @@
  * Create a get method for id.
  * 
  */
-class Geocache {
-
+public class Geocache{
+	private double x, y;
+	private int id;
+	private static int count;
+	
+	public Geocache(double a, double b){
+		x = a;
+		y = b;
+		id = count;
+		count++;
+	}
+	public Geocache(Geocache g){
+		x = g.x;
+		y = g.y;
+		id = count;
+		count++;
+	}
+	public static void resetCount(){
+		count = 0;
+	}
+	public static int getNumGeocachesCreated(){
+		return count;
+	}
+	public boolean equals(Geocache g){
+		if(this.x == g.x && this.y == g.y)
+			return true;
+		return false;
+	}
+	public String toString(){
+		String ret = "(" + x + "," + y + ")";
+		return ret;
+	}
+	public void setX(double a){
+		if((-1000.0 < a) && (a < 1000.0))
+			x = a;
+	}
+	public void setY(double a){
+		y = a;
+	}
+	public double getX(){
+		return x;
+	}
+	public double getY(){
+		return y;
+	}
+	public int getId(){
+		return id;
+	}
 }
