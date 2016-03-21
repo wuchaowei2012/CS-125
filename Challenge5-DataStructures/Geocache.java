@@ -36,8 +36,8 @@ public class Geocache{
 		count++;
 	}
 	public Geocache(Geocache g){
-		x = g.x;
-		y = g.y;
+		x = g.getX();
+		y = g.getY();
 		id = count;
 		count++;
 	}
