@@ -8,12 +8,18 @@ class CallAStaticMethod {
 
 	public static void main(String[] args) {
 
-		while (!TextIO.eof()) {
+		while (!TextIO.eof())  {
 			String line = TextIO.getln();
 			// Use ExampleClassMethods
 			// 'isEmailAddress' and 'createPadding' to complete this method
+			if(line.indexOf(64) < 0 || line.indexOf(46) < 0)
+				continue;
+			//System.out.println(line.length());
+			for(int i = 0; i < 40 - line.length(); i++){
+				TextIO.put(".");
+			}
 			TextIO.putln(line);
 		}
-
+		
 	}
 }
