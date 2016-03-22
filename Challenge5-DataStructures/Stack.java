@@ -1,4 +1,8 @@
-
+/**
+ * 
+ * @author ywang443
+ *
+ */
 public class Stack {
 	/** Adds a value to the top of the stack.*/
 	private String []stack = new String[0];

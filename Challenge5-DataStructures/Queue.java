@@ -1,4 +1,8 @@
-
+/**
+ * 
+ * @author ywang443
+ *
+ */
 public class Queue {
 	/** Adds the value to the front of the queue.
 	 * Note the queue automatically resizes as more items are added. */

@@ -1,3 +1,8 @@
+/**
+ * 
+ * @author ywang443
+ *
+ */
 public class StaticMethodsAreEasy {
 // Oh no... Someone removed  the methods but left the comments!!
 // Hint: Get the Geocache class working and passing its tests first.

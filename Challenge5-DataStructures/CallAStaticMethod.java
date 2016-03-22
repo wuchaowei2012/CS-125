@@ -3,6 +3,7 @@
  * justified to right by prepending the text with '.' characters The minimum
  * width of the line including padding is 40 characters. See the test case for
  * example input and expected output.
+ * @author ywang443
  */
 class CallAStaticMethod {
 

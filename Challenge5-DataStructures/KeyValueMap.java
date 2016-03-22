@@ -1,3 +1,6 @@
+/**
+ * @author ywang443
+ */
 import java.awt.Color;
 
 public class KeyValueMap { // aka Dictionary or Map

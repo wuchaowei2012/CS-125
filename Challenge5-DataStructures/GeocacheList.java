@@ -3,6 +3,7 @@
  * There are several errors in the code below
  *
  * Hint: Get the Geocache class working and passing its tests first.
+ * @author ywang443
  */
 public class GeocacheList {
 	private Geocache[] data = new Geocache[0];
