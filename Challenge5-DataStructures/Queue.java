@@ -9,21 +9,22 @@ public class Queue {
 		size++;
 		double []temp = queue;
 		queue = new double[size];
-		queue[0] = value;
-		for(int i = 1; i < size; i++){
-			queue[i] = temp[i-1];			
+		for(int i = 0; i < size-1; i++){
+			queue[i] = temp[i];	
 		}
+		queue[size-1] = value;
 	}
 	/** Removes the value from the end of the queue. If the queue is empty, returns 0 */
 	public double remove() {
 		if(size == 0)
 			return 0;
-		size--;
 		double []temp = queue;
+		size--;
+		queue = new double[size];
 		for(int i = 0; i < size; i++){
-			queue[i] = temp[i];
+			queue[i] = temp[i+1];
 		}
-		return temp[size];
+		return temp[0];
 	}
 	
 	/** Returns the number of items in the queue. */
@@ -41,10 +42,10 @@ public class Queue {
 	/** Returns a comma separated string representation of the queue. */
 	public String toString() {
 		String ret = "";
-		ret = ret + queue[size - 1];
-		for(int i = size - 2; i > -1; i--){
-			ret = ret + "," + queue[i];
+		for(int i = 0; i < size - 1; i++){
+			ret = ret + queue[i] + ",";
 		}
+		ret = ret + queue[size - 1];
 		return ret;
 	}
 }
