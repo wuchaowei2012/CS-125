@@ -1,4 +1,9 @@
 //UIUC CS125 SPRING 2016 MP. File: BinarySearch.java, CS125 Project: Challenge7-RecursiveKnight, Version: 2016-04-18T08:00:20-0500.644631539
+/**
+ * 
+ * @author ywang443
+ *
+ */
 public class BinarySearch {
 	/** Wrapper method. Just runs the recursive search method below for the entire array*/
 	public static boolean search(int[] array, int key) {

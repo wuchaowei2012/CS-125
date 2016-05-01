@@ -1,4 +1,9 @@
 //UIUC CS125 SPRING 2016 MP. File: MazeRunner.java, CS125 Project: Challenge7-RecursiveKnight, Version: 2016-04-18T08:00:20-0500.644631539
+/**
+ * 
+ * @author ywang443
+ *
+ */
 public class MazeRunner {
 
 	private int x, y;

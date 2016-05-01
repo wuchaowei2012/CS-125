@@ -1,4 +1,9 @@
 //UIUC CS125 SPRING 2016 MP. File: MolecularSort.java, CS125 Project: Challenge7-RecursiveKnight, Version: 2016-04-18T08:00:20-0500.644631539
+/**
+ * 
+ * @author ywang443
+ *
+ */
 public class MolecularSort {
 
 	/** Sorts each xyz coordinate using it's Z value (coord[i][2] <= coord[j][2] for i<j). */
