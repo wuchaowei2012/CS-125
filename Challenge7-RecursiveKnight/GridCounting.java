@@ -11,6 +11,10 @@ public class GridCounting {
 	 *  Hint: You'll need to test two base cases.
 	 */
 	public static int count(int x,int y, int tx, int ty) {
-		return 57;
+		if(x == tx && y == ty)
+			return 1;
+		if(x > tx || y > ty)
+			return 0;
+		return count(x + 1, y, tx, ty) + count(x + 2, y, tx, ty) + count(x, y + 1, tx, ty);
 	}
 }
