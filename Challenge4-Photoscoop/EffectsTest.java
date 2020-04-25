@@ -11,7 +11,7 @@ public class EffectsTest extends TestCase {
 		int[][] sourceB = { { 99, 88, 77 }, { 66, 55, 44 } };
 
 		String [] commands = new String[] { "half", "rotate", "flip", "mirror","redeye","funky" , "resize", "merge", "key" };
-		
+				
 		for (int i =0; i < commands.length;i++) {
 			int[][] result = Effects.process(commands[i], source, sourceB);
 			assertNotNull(result);

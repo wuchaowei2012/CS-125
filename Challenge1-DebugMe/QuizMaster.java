@@ -3,7 +3,7 @@
  * A program to test students' CS knowledge.
  * Watch out ! There may be deliberate bugs in some of the logic below :-)
  * @see QuizMaster-ReadMe.txt for details on how to complete this program.
- * @author ywang443
+ * @author fred-wu
  *
  */
 public class QuizMaster {
@@ -21,8 +21,10 @@ public class QuizMaster {
 		
 		System.out.println("Which University CS Department designed and built the pioneering ILLIAC series?");
 		System.out.println("1. Illinois\n2. Wisconsin\n3. Berkeley");
-		int illiac = TextIO.getlnInt();
 
+		int illiac = TextIO.getlnInt();
+		
+		
 		System.out.println("Which University released \'Mosaic\' - the first multimedia cross-platform browser?");
 		System.out.println("(Mosaic's source code was later licensed to Microsoft and Netscape Communications)");
 		System.out.println("1. Illinois\n2. Michigan\n3. Wisconsin");
@@ -37,14 +39,19 @@ public class QuizMaster {
 		/* Computer score: + 10 points for each correct answer */
 		if(gridComputing==1) score = score + 10;
 		if(illiac==1) score = score + 10;
+		if(mosaic ==1) score = score + 10;
 		if(varTF==1) score = score + 10;
-		if(mosaic==1) score = score + 10;
+		
 		/* Michigan students (zip code 48xxx) need to get all of them correct to receive any points */
-		if((zip/1000 == 48) && (score != 40)) 
-			score =0;
+		if(zip/1000 == 48 && score != 40) score =0;
+		
 		/* If an Illinois student gets all questions correct print congratulations */
-		System.out.println("You scored:" + score);
-		if((zip/1000 == 61) && (score == 40))
-			System.out.println("Congratulations!\n");
+		if(score == 40 && zip/1000 == 61){
+			// "You scored:40\nCongratulations!\n";
+			System.out.printf("You scored:%d\nCongratulations!\n", score);
+		} else{
+			System.out.printf("You scored:%d", score);
+		}
+		
 	}
 }

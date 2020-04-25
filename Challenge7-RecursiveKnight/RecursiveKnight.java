@@ -1,8 +1,6 @@
 //UIUC CS125 SPRING 2016 MP. File: RecursiveKnight.java, CS125 Project: Challenge7-RecursiveKnight, Version: 2016-04-18T08:00:20-0500.644631539
 /**
- * 
- * @author ywang443
- *
+ * @author fred-wu
  */
 public class RecursiveKnight {
 
@@ -24,8 +22,8 @@ public class RecursiveKnight {
 	 *Recursive case:
 	 *Update steps[x][y]
 	 *Recursively call explore() using the eight possible knight moves
-	 * {1,2},{-1,-2},{2,1} etc (Work it out!)
-	 * 
+	 * {1,2},{1, -2},{2,1},{2,-1}
+	 * {-1,2},{-1,-2},{-2,1},{-2,-1}
 	 * The recursive call will use a different step value
 	 * because it will be evaluating the next move.
 	 * 
@@ -34,19 +32,23 @@ public class RecursiveKnight {
 	 */
 	public static void explore(boolean[][] visited, int x, int y, int[][] steps, int step) {
 	//Todo: Implement RecursiveKnight.explore
-		if(x < 0 || x >= visited.length || y < 0 || y >= visited[0].length) 
-			return;
-		if(visited[x][y] == true && step > 0) 
-			return;
-		if(steps[x][y] > 0 && steps[x][y] < step) 
-			return;
+		// for base case
+		// base case1
+		if(0 > x || x >= visited.length || 0 > y || y >= visited.length){return;}
+		if(visited[x][y] && step > 0){return;}
+		if(steps[x][y] > 0 && steps[x][y] < step + 1){return;}
+		
 		steps[x][y] = step;
-		explore(visited,x+1,y+2,steps,step+1);
-		explore(visited,x-1,y+2,steps,step+1);
-		explore(visited,x+1,y-2,steps,step+1);
-		explore(visited,x-1,y-2,steps,step+1);		
-		explore(visited,x+2,y+1,steps,step+1);
-		explore(visited,x-2,y+1,steps,step+1);
-		explore(visited,x+2,y-1,steps,step+1);
-		explore(visited,x-2,y-1,steps,step+1);
+		explore(visited,x+1,y+2,steps, step+1);
+		explore(visited,x+1,y-2,steps, step+1);
+		explore(visited,x+2,y+1,steps, step+1);
+		explore(visited,x+2,y-1,steps, step+1);
+		
+		explore(visited,x-1,y+2,steps, step+1);
+		explore(visited,x-1,y-2,steps, step+1);
+		explore(visited,x-2,y+1,steps, step+1);
+		explore(visited,x-2,y-1,steps, step+1);
+		
+		
+//		throw new RuntimeException("Not yet Implemented!"); // you can remove this line!
 }	}

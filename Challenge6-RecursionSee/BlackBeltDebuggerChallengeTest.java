@@ -106,7 +106,8 @@ public class BlackBeltDebuggerChallengeTest extends TestCase {
 	}
 
 	private String getNetId() {
-		return "ywang443";
+//		return "REPLACEWITHNETID";
+		return "fred";
 	}
 
 }

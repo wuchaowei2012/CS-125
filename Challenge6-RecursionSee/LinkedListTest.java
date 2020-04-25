@@ -106,7 +106,7 @@ public class LinkedListTest extends TestCase {
 	}
 	
 	public void testInsertInCorrectPosition() {
-		LinkedList originalHead = new LinkedList("B",null);
+		LinkedList originalHead = new LinkedList("B", null);
 		LinkedList head = originalHead.insert("C");
 		assertTrue(head == originalHead); // expect no change
 		head = head.insert("D");
@@ -114,7 +114,7 @@ public class LinkedListTest extends TestCase {
 		head = head.insert("A");
 		assertTrue(head != originalHead); // expect no change
 		assertEquals("A B C D.", head.getSentence());
-		assertEquals(4,head.getCount());
+		assertEquals(4, head.getCount());
 	}
 	
 	protected void tearDown() throws Exception {

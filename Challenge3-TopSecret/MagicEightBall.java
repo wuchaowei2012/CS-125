@@ -1,7 +1,8 @@
 //UIUC CS125 SPRING 2016 MP. File: MagicEightBall.java, CS125 Project: Challenge3-TopSecret, Version: 2016-02-15T07:51:07-0600.053978555
- /**
+/**
  * TODO: add your netid to the line below.
- * @author ywang443
+ * 
+ * @author fred-wu
  */
 public class MagicEightBall {
 
@@ -13,9 +14,9 @@ public class MagicEightBall {
 	 * Unhappy students with less than 10 hours of study always results in
 	 * "Embarrassing Michigan Road Trip". Social happy students with more than 20
 	 * hours of CS125 study always results in "Ace CS125 Exam". Social, unhappy
-	 * students with more than 15 hours of study always results in "Rick Rolled
-	 * Four Times in One Day". All other students have their "Delete Enter Keys
-	 * Swapped" by the ACM office.
+	 * students with more than 15 hours of study always results in "Rick Rolled Four
+	 * Times in One Day". All other students have their "Delete Enter Keys Swapped"
+	 * by the ACM office.
 	 * 
 	 * @param args
 	 */
@@ -31,18 +32,16 @@ public class MagicEightBall {
 		// An example (incorrect) if-else structure is shown below.
 		// However, you should use the above rules to construct your own
 		// solution.
-		if (!happy && hours < 10) {
-			TextIO.put("Embarrassing Michigan Road Trip");
-		} 
-		else if (hours > 20 && social) {
-			TextIO.put("Ace CS125 Exam");
-		} 
-		else if (social && !happy && hours > 15) {
+
+		if (social && !happy && hours > 15) {
 			TextIO.put("Rick Rolled Four Times in One Day");
-		} 
-		else {
+		} else if (social && happy && hours > 15) {
+			TextIO.put("Ace CS125 Exam");
+		} else if (!happy && hours < 10) {
+			TextIO.put("Embarrassing Michigan Road Trip");
+		} else {
 			TextIO.put("Delete Enter Keys Swapped");
-			}
+		}
 
 	}
 

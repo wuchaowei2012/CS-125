@@ -1,4 +1,9 @@
 /**
+ * @author fred wu
+ *
+ */
+
+/**
  * Create a class 'Geocache' with two private instance variables 'x' 'y' of type double and a private integer 'id'
  * .
  * A class variable 'count' will also be required to count the number of times a Geocache object has been created (instantiated).
@@ -22,54 +27,67 @@
  * If the value is outside of this range, the new value is ignored and the Geocache's x value remains unchanged.
  *   
  * Create a get method for id.
- * @author ywang443
+ * 
  */
-public class Geocache{
-	private double x, y;
+class Geocache {
+	private double x;
+	private double y;
 	private int id;
-	private static int count;
-	
-	public Geocache(double a, double b){
-		x = a;
-		y = b;
-		id = count;
-		count++;
+	private static int total=0;
+
+	public Geocache(double d, double e) {
+		total +=1;
+		this.x = d;
+		this.y = e;
+		this.id = total -1;
 	}
-	public Geocache(Geocache g){
-		x = g.getX();
-		y = g.getY();
-		id = count;
-		count++;
+
+	public Geocache(Geocache other) {
+		total +=1;
+		this.x = other.x;
+		this.y = other.y;
+		this.id = total -1;
 	}
-	public static void resetCount(){
-		count = 0;
-	}
-	public static int getNumGeocachesCreated(){
-		return count;
-	}
-	public boolean equals(Geocache g){
-		if(this.x == g.x && this.y == g.y)
-			return true;
-		return false;
-	}
-	public String toString(){
-		String ret = "(" + x + "," + y + ")";
-		return ret;
-	}
-	public void setX(double a){
-		if((-1000.0 < a) && (a < 1000.0))
-			x = a;
-	}
-	public void setY(double a){
-		y = a;
-	}
-	public double getX(){
+
+	public double getX() {
 		return x;
 	}
-	public double getY(){
-		return y;
+
+	public static void resetCount() {
+		total = 0;
+		
 	}
-	public int getId(){
-		return id;
+
+	public static int getNumGeocachesCreated() {
+		return total;
+	}
+
+	public void setX(double d) {
+		if (d > -1000 && d< 1000 )
+			this.x = d;
+	}
+
+	public void setY(double d) {
+		this.y = d;
+	}
+
+	public int getId() {
+		return this.id;
+	}
+
+	public double getY() {
+		return this.y;
+	}
+	
+	public boolean equals(Geocache a){
+		if (a.getX() == this.getX() && a.getY() == this.getY()){
+			return true;
+		} else{
+			return false;
+		}
+	}
+	
+	public String toString(){
+		return  "(" + String.valueOf(this.getX()) + ',' + String.valueOf(this.getY())  + ")"  ; 
 	}
 }

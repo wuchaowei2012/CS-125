@@ -127,6 +127,10 @@ public class PixelEffectsTest extends TestCase {
 				{ 23, 13, 3 } };
 		int[][] actual = PixelEffects.rotateLeft(source);
 		assertEntriesEqual(expected, actual);
+		
+//		expected = { { 20, 10, 0 }, { 21, 11, 1 }, { 22, 12, 2 },
+//				{ 23, 13, 3 } };
+		//[][] { { 0, 1, 2, 3 }, { 10, 11, 12, 13 }, { 20, 21, 22, 23 } };
 		assertSourceCopiedAndUnchanged(source,getTestSourceArray(),actual);
 	}
 

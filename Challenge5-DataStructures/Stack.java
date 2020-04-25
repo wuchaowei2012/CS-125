@@ -1,61 +1,69 @@
+import java.util.LinkedList;
+
 /**
- * 
- * @author ywang443
+ * @author fred wu
  *
  */
+
 public class Stack {
-	/** Adds a value to the top of the stack.*/
-	private String []stack = new String[0];
-	private int size = 0;
-	
-	public void push(String value){
-		size++;
-		String []temp = stack;
-		stack = new String[size];
-		for(int i = 0; i < size-1; i++){
-			stack[i] = temp[i];	
-		}
-		stack[size-1] = value;
+	/** Adds a value to the top of the stack. */
+	private LinkedList<String> q;
+
+	public Stack() {
+		q = new LinkedList<String>();
 	}
-	
+
+	public void push(String value) {
+		q.addFirst(value);
+	}
+
 	/** Removes the topmost string. If the stack is empty, returns null. */
 	public String pop() {
-		if(size == 0)
+		if (q.size() == 0) {
 			return null;
-		String []temp = stack;
-		size--;
-		stack = new String[size];
-		for(int i = 0; i < size; i++){
-			stack[i] = temp[i];
 		}
-		return temp[size];
+		return q.pop();
 	}
-	
-	/** Returns the topmost string but does not remove it. If the stack is empty, returns null. */
+
+	/**
+	 * Returns the topmost string but does not remove it. If the stack is empty,
+	 * returns null.
+	 */
 	public String peek() {
-		if(size == 0)
+		if (q.isEmpty()){
 			return null;
-		return stack[size-1];
+		}
+		return q.getFirst();
 	}
-	
+
 	/** Returns true iff the stack is empty */
 	public boolean isEmpty() {
-		if(size == 0)
-			return true;
-		return false;
+		return q.isEmpty();
 	}
 
 	/** Returns the number of items in the stack. */
 	public int length() {
-		return size;
+		return q.size();
 	}
-	
-	/** Returns a string representation of the stack. Each string is separated by a newline. Returns an empty string if the stack is empty. */
+
+	/**
+	 * Returns a string representation of the stack. Each string is separated by
+	 * a newline. Returns an empty string if the stack is empty.
+	 */
 	public String toString() {
-		String ret = "";
-		for(int i = 0; i < size; i++){
-			ret = ret + stack[i] + "\n";
+		String rst = "";
+		if (q.size() == 0) {
+			System.out.println("size 0");
+		} else {
+
+			for (int i = q.size() - 1; i >= 0; i--) {
+				System.out.println("index");
+				System.out.println(q.get(i));
+
+				rst = rst.concat(q.get(i));
+				rst = rst.concat("\n");
+			}
 		}
-		return ret;
+		return rst;
 	}
 }

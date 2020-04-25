@@ -1,40 +1,46 @@
 /**
- * Complete the following GeocacheList, to ensure all unit tests pass.
- * There are several errors in the code below
+ * @author fred wu
+ *
+ */
+
+/**
+ * Complete the following GeocacheList, to ensure all unit tests pass. There are
+ * several errors in the code below
  *
  * Hint: Get the Geocache class working and passing its tests first.
- * @author ywang443
  */
 public class GeocacheList {
 	private Geocache[] data = new Geocache[0];
 	private int size = 0;
 
 	public Geocache getGeocache(int i) {
-		return data[i];
+		return this.data[i];
 	}
 
 	public int getSize() {
-		return size;
+		return this.size;
 	}
 
 	public GeocacheList() {
+		// return this.data;
 	}
 
 	public GeocacheList(GeocacheList other, boolean deepCopy) {
-		if(deepCopy){
-			for(int i = 0; i < other.data.length; i++){
-				add(other.data[i]);
-				data[i] = new Geocache(other.data[i]);
+		data = new Geocache[other.data.length];
+		size = other.size;
+		int sz = other.data.length;
+
+		if (deepCopy) {
+			for (int i = 0; i < sz; i++) {
+				data[i] = new Geocache(other.data[i]);  // 这个是所谓的深层拷贝
 			}
-		}
-		else{
-			for(int i = 0; i < other.data.length; i++){
-				add(other.data[i]);
-				data[i].setX(other.data[i].getX());
-				data[i].setY(other.data[i].getY());
+		} else {
+			for (int i = 0; i < sz; i++) {
+				data[i] = other.data[i];  //这个就是所谓的浅拷贝
 			}
+
 		}
-		size = other.getSize();
+
 	}
 
 	public void add(Geocache p) {
@@ -45,16 +51,12 @@ public class GeocacheList {
 			for (int i = 0; i < old.length; i++)
 				data[i] = old[i];
 		}
-		data[size-1] = p;
+		data[size - 1] = p;
 	}
 
-	public GeocacheList removeFromTop() {
-		this.size--;
-		GeocacheList other = new GeocacheList();
-		for(int i = 0; i < other.getSize(); i++){
-			other.data[i] = this.data[i];
-		}
-		return other;
+	public Geocache removeFromTop() {
+		size --;
+		return null;
 	}
 
 	public String toString() {

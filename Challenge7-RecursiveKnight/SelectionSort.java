@@ -1,8 +1,6 @@
 //UIUC CS125 SPRING 2016 MP. File: SelectionSort.java, CS125 Project: Challenge7-RecursiveKnight, Version: 2016-04-18T08:00:20-0500.644631539
-/**
- * 
- * @author ywang443
- *
+/*
+ * @author fred_wu
  */
 public class SelectionSort {
 	/**
@@ -12,23 +10,16 @@ public class SelectionSort {
 	 * @param data
 	 */
 	public static void sort(double[] data) {
-		sort(data,0,data.length-1);
+		
 	}
 
 	/** Recursively sorts the sub array lo...hi using selection sort algorithm.*/
 	public static void sort(double[] data, int lo, int hi) {
-		if(lo == hi) 
-			return;
-		int min = findMin(data,lo,hi);
-		swap(data, lo, min);
-		sort(data, lo+1, hi);
+	
 	}
 
 	/** Helper method for selection sort: Swaps values at indices i and j*/
 	public static void swap(double[] data, int i, int j) {
-		double temp = data[i];
-		data[i] = data[j];
-		data[j] = temp;
 	}
 
 	/**
@@ -39,12 +30,7 @@ public class SelectionSort {
 	 * @return
 	 */
 	public static int findMin(double[] data, int lo, int hi) {
-		if(lo == hi) 
-			return lo;
-		if(data[lo] > data[hi]) 
-			return findMin(data, lo+1, hi);
-		return findMin(data, lo, hi-1);
-
+		return 0;
 	}
 
 }

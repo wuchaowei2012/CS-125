@@ -1,7 +1,12 @@
+
 /**
- * @author ywang443
+ * @author fred wu
+ *
  */
+
 import java.awt.Color;
+import java.util.LinkedList;
+import java.util.List;
 
 public class KeyValueMap { // aka Dictionary or Map
 
@@ -9,69 +14,53 @@ public class KeyValueMap { // aka Dictionary or Map
 	 * Adds a key and value. If the key already exists, it replaces the original
 	 * entry.
 	 */
-	private String[] keys = new String[0];
-	private Color[] color = new Color[0];
-	private int size = 0;
-	
+	private LinkedList<String> keys;
+	private LinkedList<Color> values;
+
+	public KeyValueMap() {
+		keys = new LinkedList<String>();
+		values = new LinkedList<Color>();
+	}
+
 	public void add(String key, Color value) {
-		size++;
-		String []temp = keys;
-		keys = new String[size];
-		keys[0] = key;
-		for(int i = 1; i < keys.length; i++){
-			keys[i] = temp[i-1];			
-		}
-		Color []temp2 = color;
-		color = new Color[size];
-		color[0] = value;
-		for(int i = 1; i < color.length; i++){
-			color[i] = temp2[i-1];			
-		}		
+		keys.add(key);
+		values.add(value);
+
 	}
 
 	/**
 	 * Returns particular Color object previously added to this map.
 	 */
 	public Color find(String key) {
-		for(int i = 0; i < size; i++){
-			if(keys[i].equals(key)){
-				return color[i];
-			}
+		int index = keys.indexOf(key);
+
+		if (index != -1) {
+			return values.get(index);
+		} else {
+			return null;
 		}
-		return null;
 	}
 
 	/**
 	 * Returns true if the key exists in this map.
 	 */
 	public boolean exists(String key) {
-		for(int i = 0; i < keys.length; i++){
-			if(keys[i].equals(key)){
-				return true;
-			}
+		int index = keys.indexOf(key);
+		if (index != -1) {
+			return true;
+		} else {
+			return false;
 		}
-		return false;
 	}
 
 	/**
 	 * Removes the key (and the color) from this map.
 	 */
 	public void remove(String key) {
-		size--;
-		String []temp = keys;
-		keys = new String[size];
-		int i = 0;
-		for( ; i < temp.length; i++){
-			if(!temp[i].equals(key)){
-				keys[i] = temp[i];			
-			}
-			else{
-				i++;
-				break;
-			}
-		}
-		for( ; i < temp.length; i++){
-			keys[i-1] = temp[i];
+		int index = keys.indexOf(key);
+		if (index != -1) {
+			keys.remove(index);
+			values.remove(index);
 		}
 	}
 

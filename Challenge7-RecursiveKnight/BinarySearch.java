@@ -1,8 +1,6 @@
 //UIUC CS125 SPRING 2016 MP. File: BinarySearch.java, CS125 Project: Challenge7-RecursiveKnight, Version: 2016-04-18T08:00:20-0500.644631539
-/**
- * 
- * @author ywang443
- *
+/*
+ * @author fred_wu
  */
 public class BinarySearch {
 	/** Wrapper method. Just runs the recursive search method below for the entire array*/
@@ -17,14 +15,23 @@ public class BinarySearch {
 	 * and proceed accordingly.
 	 */
 	static boolean search(int[] array, int key, int lo, int hi) {
-		if(lo > hi)
+		//return false;
+//		System.out.println("lo:" + String.valueOf(lo));
+//		System.out.println("hi:" + String.valueOf(hi));
+		if(hi < 0 || lo < 0){
 			return false;
-		int mid = (lo + hi)/2;
-		if(array[mid] == key)
+		}
+		if(lo == hi && array[lo] != key){
+			return false;
+		}
+		else if(key == array[(lo + hi) / 2]){
 			return true;
-		if(key < array[mid]) 
-			return search(array, key, lo, mid-1);
-		else
-			return search(array, key, mid+1, hi);
+		}
+		else if (key < array[(lo + hi) / 2]){
+			return search(array, key, lo, (lo + hi) / 2 - 1);
+		} else{
+			return search(array, key,  (lo + hi) / 2 + 1, hi);
+		}
+		
 	}
 }

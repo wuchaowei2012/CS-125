@@ -2,7 +2,7 @@
 /**
  * Prints sum of odd numbers in a specific format.
  * TODO: add your netid to the line below
- * @author ywang443
+ * @author fred-wu
  */
 public class OddSum { 
 /**
@@ -17,31 +17,27 @@ Max?
 36 = 11 + 9 + 7 + 5 + 3 + 1
 
  */
- public static void main(String[] args) { 
-	 TextIO.putln("Max?");
-	 int max = 0;
-	 String ret = "";
-	 String rev = "";
-	 int input = TextIO.getlnInt();
-	 for(int i = 1; i <= input; i++){
-		 if(i%2 == 1){
-			 ret += i;
-			 max += i;
-		 }
-		 if(i%2 == 0 && i != input)
-			 ret += " + ";
+ public static void main(String[] args) {
+	 System.out.println("Max?");
+	 int max = TextIO.getlnInt();
+	 
+	 int totalOdd = (max-1) /2 + 1 ;
+	 String[] oddlist = new String[totalOdd];
+	 String[] oddlist2 = new String[totalOdd];
+	 
+	 int sum = 0;
+	 for(int i =0; i < totalOdd; i++) {
+		 String.valueOf(2 * i + 1);
+		 
+		 oddlist[i] = String.valueOf(2 * i + 1);
+		 sum += 2 * i + 1;
+		 oddlist2[totalOdd - 1 - i] = String.valueOf(2 * i + 1);
 	 }
-	 ret = ret + " = " + max; 
-	 rev = rev + max + " = ";
-	 for(int i = input; i > 0; i--){
-		 if(i%2 == 1){
-			 rev += i;
-			 max += i;
-		 }
-		 if(i%2 == 0 && i != input)
-			 rev += " + ";
-	 }
-	 TextIO.putln(ret);
-	 TextIO.putln(rev);
+	 
+	 
+	 System.out.println(String.join(" + ",  oddlist) + " = " + String.valueOf(sum)) ;
+	 System.out.println(String.valueOf(sum)+ " = " + String.join(" + ",  oddlist2)) ;
+	 
+
   } // end of main method
 } // end of class 

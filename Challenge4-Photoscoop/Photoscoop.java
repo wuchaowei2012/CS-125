@@ -1,3 +1,4 @@
+
 //UIUC CS125 SPRING 2016 MP. File: Photoscoop.java, CS125 Project: Challenge4-Photoscoop, Version: 2016-02-22T08:07:56-0600.345149194
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
@@ -66,12 +67,13 @@ public class Photoscoop {
 	 */
 	static void createFileChooser() {
 		try {
-			if(chooser == null)
+			if (chooser == null)
 				chooser = new JFileChooser();
 		} catch (Exception ex) {
 			System.out.println("Failed to create JFileChooser:" + ex.getMessage());
 			ex.printStackTrace();
-			JOptionPane.showMessageDialog(null,"Sorry selecting files and directories is not supported on your operating system. Photoscoop.java");
+			JOptionPane.showMessageDialog(null,
+					"Sorry selecting files and directories is not supported on your operating system. Photoscoop.java");
 			// See http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6544857
 			// Fixed in JDK6 update 18
 		}
@@ -90,7 +92,7 @@ public class Photoscoop {
 			if (name.endsWith(".jpg") || name.endsWith(".png"))
 				openImageFile(f.getPath());
 		}
-			
+
 	}
 
 	/**
@@ -284,7 +286,7 @@ public class Photoscoop {
 			item.addActionListener(effectAction);
 			combineMenu.add(item);
 		}
-		
+
 		for (String name : new String[] { "hide", "extract" }) {
 			JMenuItem item = new JMenuItem(name);
 			item.addActionListener(effectAction);
@@ -295,4 +297,3 @@ public class Photoscoop {
 	}
 
 } // end class
-

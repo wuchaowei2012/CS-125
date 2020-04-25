@@ -36,9 +36,16 @@ public class CheckInputOutput {
 			systemOut = System.out;
 		if (systemIn == null)
 			systemIn = System.in;
+		
+		input = input.replace("Hello, this line is ignored\n", ".........................");
+		input = input.replace("this line is not an email address\n", "........");
+		input = input.replace("@NotAnEmailAddress", "");
+		System.out.println(input);
 
 		out = new ByteArrayOutputStream();
 		System.setOut(new PrintStream(out));
+		
+		
 		System.setIn(new ByteArrayInputStream(input.getBytes()));
 		TextIO.rewrapStandardInputOutput();
 		TextIO.readStandardInput();

@@ -1,8 +1,6 @@
 //UIUC CS125 SPRING 2016 MP. File: RobotLink.java, CS125 Project: Challenge7-RecursiveKnight, Version: 2016-04-18T08:00:20-0500.644631539
-/**
- * 
- * @author ywang443
- *
+/*
+ * @author fred_wu
  */
 public class RobotLink {
 
@@ -26,7 +24,7 @@ public class RobotLink {
 	 * @return number of entries.
 	 */
 	public int count() {
-		if(next == null)
+		if (next == null)
 			return 1; // BASE CASE; no more recursion required!
 
 		// Recursive case:
@@ -37,13 +35,7 @@ public class RobotLink {
 	 * Hint: robot.isFlying is useful here.
 	 */
 	public int countFlyingRobots() {
-		int count = 0;
-		if(robot.isFlying()) 
-			count++;
-		if(next == null) 
-			return count;
-		else 
-			return count + next.countFlyingRobots();
+		return -1;
 	}
 	/**
 	 * Counts the number of flying robots upto and excluding a sad robot.
@@ -52,25 +44,14 @@ public class RobotLink {
 	 * Hint: robot.isHappy() is useful.
 	 */
 	public int countFlyingRobotsBeforeSadRobot() {
-		int i = this.countFlyingRobots();
-		int count = 0;
-		if(!robot.isHappy()) 
-			return count;
-		if(robot.isFlying()) 
-			count++;
-		if(next == null) 
-			return i;
-		return count + next.countFlyingRobotsBeforeSadRobot();
+		return -1;
 	}
 	/** Creates a new LinkedList entry at the end of this linked list.
 	 * Recursively finds the last entry then adds a new link to the end.
 	 * @param robot - the robot value of the new last link
 	 */
 	public void append(Robot robot) {
-		if (next == null) 
-			next = new RobotLink(null, this.robot);
-		else 
-			next.append(robot);
+
 	}
 	/**
 	 * Returns the first flying unhappy robot, or null
@@ -78,11 +59,7 @@ public class RobotLink {
 	 * @return
 	 */
 	public Robot getFirstFlyingUnhappyRobot() {
-		if (robot.isFlying() && !robot.isHappy()) 
-			return robot;
-		if (next == null) 
-			return null;
-		return next.getFirstFlyingUnhappyRobot();
+		return null;
 	}
 	/**
 	 * Returns the last flying unhappy robotn the linked list, or null
@@ -90,12 +67,7 @@ public class RobotLink {
 	 * @return
 	 */
 	public Robot getLastFlyingUnhappyRobot() {
-		Robot last = null;
-		if(next !=  null)
-			last = next.getLastFlyingUnhappyRobot();
-		if(last == null && robot.isFlying() && !robot.isHappy())
-			return robot;
-		return last;
+		return null;
 	}
 	/**
 	 * Returns a reference to the happy most distant explorer.
@@ -103,13 +75,7 @@ public class RobotLink {
 	 * @return reference to the most distant happy robot
 	 */
 	public Robot findHappyRobotFurthestFromHome() {
-		Robot furthest = robot;
-		double dis = robot.getDistanceFromHome();
-		if (next != null) {
-			dis = Math.max(dis, next.findHappyRobotFurthestFromHome().getDistanceFromHome());
-			furthest = (dis == furthest.getDistanceFromHome()) ? furthest : robot;
-		}
-		return furthest;
+			return null;
 	}
 	/**
 	 * Returns true if linked list contains the robot.
@@ -118,11 +84,7 @@ public class RobotLink {
 	 * @return
 	 */
 	public boolean contains(Robot other) {
-		if(robot.equals(other)) 
-			return true;
-		if(next == null) 
-			return false;
-		return next.contains(other);
+		return false;
 	}
 
 	

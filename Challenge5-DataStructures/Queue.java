@@ -1,55 +1,65 @@
+import java.awt.Color;
+import java.util.LinkedList;
+
 /**
- * 
- * @author ywang443
+ * @author fred wu
  *
  */
+
 public class Queue {
-	/** Adds the value to the front of the queue.
-	 * Note the queue automatically resizes as more items are added. */
-	private double []queue = new double[0];
-	private int size = 0;
-	
+	/**
+	 * Adds the value to the front of the queue. Note the queue automatically
+	 * resizes as more items are added.
+	 */
+
+	private LinkedList<Double> q;
+
+	public Queue() {
+		q = new LinkedList<Double>();
+	}
+
 	public void add(double value) {
-		size++;
-		double []temp = queue;
-		queue = new double[size];
-		for(int i = 0; i < size-1; i++){
-			queue[i] = temp[i];	
-		}
-		queue[size-1] = value;
+		q.addFirst(value);
 	}
-	/** Removes the value from the end of the queue. If the queue is empty, returns 0 */
+
+	/**
+	 * Removes the value from the end of the queue. If the queue is empty,
+	 * returns 0
+	 */
 	public double remove() {
-		if(size == 0)
+		if (q.size() > 0) {
+			Double last = q.removeLast();
+			return last;
+		} else {
 			return 0;
-		double []temp = queue;
-		size--;
-		queue = new double[size];
-		for(int i = 0; i < size; i++){
-			queue[i] = temp[i+1];
 		}
-		return temp[0];
 	}
-	
+
 	/** Returns the number of items in the queue. */
 	public int length() {
-		return size;	
+		return q.size();
 	}
-	
+
 	/** Returns true iff the queue is empty */
 	public boolean isEmpty() {
-		if(size == 0)
-			return true;
-		return false;
+		return q.size() == 0;
 	}
-	
+
 	/** Returns a comma separated string representation of the queue. */
 	public String toString() {
-		String ret = "";
-		for(int i = 0; i < size - 1; i++){
-			ret = ret + queue[i] + ",";
+		String rst = "";
+		if (q.size() == 0) {
+			System.out.println("size 0");
+		} else {
+
+			rst = rst.concat(String.valueOf(q.get(q.size() - 1)));
+			for (int i = q.size() - 2; i >= 0; i--) {
+				System.out.println("index");
+				System.out.println(q.get(i));
+				rst = rst.concat(",");
+				rst = rst.concat(String.valueOf(q.get(i)));
+			}
 		}
-		ret = ret + queue[size - 1];
-		return ret;
+		return rst;
 	}
 }
